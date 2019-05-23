@@ -136,5 +136,6 @@ dmypy.json
 .pyre/
 /media
 venv
+/static
 
 # End of https://www.gitignore.io/api/django
