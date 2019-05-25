@@ -112,6 +112,7 @@ $(document).ready(function()
 		{
 			var placeholder = $('.custom_dropdown_placeholder');
 			var list = $('.custom_list');
+			console.log($('.custom_dropdown_placeholder').value);
 		}
 
 		placeholder.on('click', function (ev)

@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load humanize %}
 
 {% block content %}
 <!DOCTYPE html>
@@ -33,21 +34,21 @@
 				<!-- Images -->
 				<div class="col-lg-2 order-lg-1 order-2">
 					<ul class="image_list">
-						<li data-image="{% static '/images/razer_blade.png' %}"><img src="{% static '/images/razer_blade.png' %}" alt=""></li>
+						<li data-image="{{ listing.photo_main.url }}"><img src="{{ listing.photo_main.url }}" alt=""></li>
 					</ul>
 				</div>
 
 				<!-- Selected Image -->
 				<div class="col-lg-5 order-lg-2 order-1">
-					<div class="image_selected"><img src="{% static '/images/razer_blade.png' %}" alt=""></div>
+					<div class="image_selected"><img src="{{ listing.photo_main.url }}" alt=""></div>
 				</div>
 
 				<!-- Description -->
 				<div class="col-lg-5 order-3">
 					<div class="product_description">
-						<div class="product_category">Notebooks</div>
-						<div class="product_name">Razer Blade 2019</div>
-						<div class="product_text"><p>Notebook mais esperado do ano!</p></div>
+						<div class="product_category">{{ listing.category }}</div>
+						<div class="product_name">{{ listing.title }}</div>
+						<div class="product_text"><p>{{ listing.description }}</p></div>
 						<div class="order_info d-flex flex-row">
 							<form action="#">
 								<div class="clearfix" style="z-index: 1000;">
@@ -64,10 +65,9 @@
 
 								</div>
 
-								<div class="product_price">R$ 4600</div>
+								<div class="product_price">${{ listing.price }}</div>
 								<div class="button_container">
 									<button type="button" class="button cart_button">Adicionar ao carrinho</button>
-									<div class="product_fav"><i class="fas fa-heart"></i></div>
 								</div>
 								
 							</form>
