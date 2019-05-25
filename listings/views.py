@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 def index(request):
-    return render(request, 'index.html')
+    return render(request, 'listings/index.html')
 
-def product(request):
-    return render(request, 'product.html')
+def listing(request):
+    return render(request, 'listings/listing.html')
