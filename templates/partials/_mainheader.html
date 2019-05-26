@@ -18,10 +18,10 @@
                     <div class="header_search_content">
                         <div class="header_search_form_container">
                             <form action="{% url 'search' %}" class="header_search_form clearfix">
-                                <input type="search" name="keywords" class="header_search_input" placeholder="Buscar produtos...">
+                                <input type="search" name="keywords" class="header_search_input" placeholder="Buscar produtos..." style="width: 100%">
                                 <div class="custom_dropdown">
-                                    <div class="custom_dropdown_list">
-                                        <span class="custom_dropdown_placeholder clc">Todas categorias</span>
+                                    <div class="custom_dropdown_list" style="display:none">
+                                        <span class="custom_dropdown_placeholder" style="display: hidden"></span>
                                         <i class="fas fa-chevron-down"></i>
                                         <ul class="custom_list clc">
                                         </ul>
@@ -41,11 +41,11 @@
                             <div class="cart_container d-flex flex-row align-items-center justify-content-end">
                                 <div class="cart_icon">
                                     <img src="{% static '/images/cart.png' %}" alt="">
-                                    <div class="cart_count"><span>10</span></div>
+                                    <div class="cart_count"><span>0</span></div>
                                 </div>
                                 <div class="cart_content">
                                     <div class="cart_text"><a href="{% url 'cart' %}">Carrinho</a></div>
-                                    <div class="cart_price">R$ 85</div>
+                                    <div class="cart_price">R$ 0</div>
                                 </div>
                             </div>
                         </div>
